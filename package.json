@@ -1,0 +1,41 @@
+{
+  "name": "pandaQi",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "node server.js",
+    "test": "export NODE_ENV=development && node server.js",
+    "shengtian": "export NODE_ENV=shengtian && node server.js",
+    "shengtianTest": "export NODE_ENV=shengtianDevelopment && node server.js",
+    "yungengxin": "export NODE_ENV=yungengxin && node server.js"
+  },
+  "dependencies": {
+    "@rematch/core": "0.6.0",
+    "@zeit/next-less": "^1.0.1",
+    "antd": "^2.13.11",
+    "axios": "^0.18.0",
+    "babel-plugin-import": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "koa": "^2.0.1",
+    "koa-router": "^7.1.0",
+    "less": "^3.0.4",
+    "localforage": "^1.5.6",
+    "lodash": "^4.17.11",
+    "next": "^7.0.0",
+    "nprogress": "^0.2.0",
+    "pm2": "^3.2.2",
+    "promise-polyfill": "^8.1.0",
+    "qrcode.react": "^0.8.0",
+    "qs": "^6.5.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "5.0.7",
+    "react-slick": "^0.23.2",
+    "redux": "4.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.1.6"
+  }
+}
