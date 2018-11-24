@@ -4,11 +4,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "node server.js",
-    "test": "export NODE_ENV=development && node server.js",
-    "shengtian": "export NODE_ENV=shengtian && node server.js",
-    "shengtianTest": "export NODE_ENV=shengtianDevelopment && node server.js",
-    "yungengxin": "export NODE_ENV=yungengxin && node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "@rematch/core": "0.6.0",

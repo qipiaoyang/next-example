@@ -15,19 +15,9 @@ app.prepare()
     const router = new Router()
 
     router.get('/', async ctx => {
-      await app.render(ctx.req, ctx.res, '/index', ctx.query)
+      await app.render(ctx.req, ctx.res, '/index')
       ctx.respond = false
-    })
-
-    router.get('/detail', async ctx => {
-      await app.render(ctx.req, ctx.res, '/detail', ctx.query)
-      ctx.respond = false
-    })
-
-    router.get('/list', async ctx => {
-        await app.render(ctx.req, ctx.res, '/list', ctx.query)
-        ctx.respond = false
-    })
+    });
 
     router.get('*', async ctx => {
       await handle(ctx.req, ctx.res)
