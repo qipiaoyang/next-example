@@ -31,21 +31,21 @@ pm2 start
 
 ```
 ├─components	项目的共用组件
-├─config	项目的配置文件
+├─config  项目的配置文件
 ├─model	Model层
-├─pages	各个页面存放的文件夹
-├─service	service层
+├─pages  各个页面存放的文件夹
+├─service	 service层
 ├─static	静态资源文件夹
 ├─styles	样式文件夹
 │      index.less
 │      _base.less
-├─utils	工具类(request是封装的前端请求，withRmatch封装的redux中间件)
+├─utils	 工具类(request是封装的前端请求，withRmatch封装的redux中间件)
 │      request.js
 │      withRematch.js
-├─babelrc	babel配置文件夹
+├─babelrc	 babel配置文件夹
 ├─ecosystem.config	pm2配置文件夹
-├─next.config	next配置文件夹
+├─next.config	 next配置文件夹
 ├─package.json								
-├─server.js	node服务启动文件
+├─server.js	 node服务启动文件
 └─README
 ```
