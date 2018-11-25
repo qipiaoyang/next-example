@@ -6,7 +6,12 @@ const indexModel = {
 		
   }, // initial state
   reducers: {
-   
+			updateState(state,payload) {
+            return {
+                ...state,
+                ...payload,
+            }
+        }
   },
   effects: {
     async fetchUsers (payload, rootState) {

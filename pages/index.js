@@ -10,6 +10,7 @@ import {
 	withRouter
 } from 'next/router';
 import "isomorphic-unfetch";
+import TestForm from "../components/header";
 
 class Index extends React.Component {
 
@@ -42,10 +43,13 @@ class Index extends React.Component {
 
 	render() {
 		
-		const { users, reqInfo } = this.props;
+		const { users, reqInfo, username, router} = this.props;
 		console.log(reqInfo );
 		return ( 
 			<div>
+				<span onClick={() => {
+					router.push("/detail");
+				}}>点击我跳转到详情页</span>
 				{users.map((item,index) => {
 					return (
 						<div key={index} style={{display: "inline-block"}}>
@@ -54,6 +58,9 @@ class Index extends React.Component {
 						</div>
 					)
 				})}
+				
+				<p>name:        {username}</p>
+				<TestForm></TestForm>
 			</div>
 		)
 	}
