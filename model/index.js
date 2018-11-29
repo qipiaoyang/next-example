@@ -4,7 +4,7 @@ const indexModel = {
   state: {
 		login: false,
 		
-  }, // initial state
+  },
   reducers: {
 			updateState(state,payload) {
             return {

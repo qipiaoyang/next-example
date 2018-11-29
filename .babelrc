@@ -1,5 +1,13 @@
 {
-  "presets": ["next/babel"],
+  "presets": ["next/babel",[
+		"@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        },
+				"include": ['Built-ins']
+      }
+	]],
   "plugins": [
     ["@babel/plugin-proposal-decorators", { "decoratorsBeforeExport": true }],
     [

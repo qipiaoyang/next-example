@@ -30,18 +30,14 @@ class TestForm extends React.Component {
 							rules: [{ required: true, message: '请输入手机号', pattern: MOBILE }],
 							initialValue: username
 						})(
-							<Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="请输入手机号" />
+							<Input onChange={() => {
+								dispatch.indexModel.updateState({
+									username: value.username
+								})
+							}} prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="请输入手机号" />
 						)}	
 					</FormItem>
 				</Form>
-				
-				<button onClick={() => {
-					validateFields((error,value) => {
-						dispatch.indexModel.updateState({
-							username: value.username
-						})
-					})
-				}}>提交</button>
 			</div>
 		)
 	}
