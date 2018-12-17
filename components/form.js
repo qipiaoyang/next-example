@@ -3,10 +3,7 @@ import { Form, Input, Icon } from "antd";
 import {
 	dispatch
 } from '@rematch/core';
-import {
-	initStore
-} from '../model/store';
-import withRematch from '../utils/withRematch';
+import { connect } from 'react-redux';
 import { MOBILE } from "../config/pattern";
 const FormItem = Form.Item;
 
@@ -43,6 +40,6 @@ class TestForm extends React.Component {
 	}
 }
 
-export default withRematch(initStore,(state) => ({
+export default connect((state) => ({
 	...state.indexModel
 }))(Form.create()(TestForm))
