@@ -1,6 +1,5 @@
 import React from "react";
 import TestForm from "../components/form";
-import { dispatch } from '@rematch/core';
 import { initStore } from '../model/store';
 import withRematch from '../utils/withRematch';
 import { withRouter } from 'next/router';
@@ -9,9 +8,6 @@ import "isomorphic-unfetch";
 class FormComponent extends React.Component {
 	
 	static async getInitialProps() {
-		await new Promise((resolve) => {
-			setTimeout(resolve, 3000)
-		})
 		
 		return {}
 	}
@@ -19,7 +15,7 @@ class FormComponent extends React.Component {
 	
 	render() {
 		
-		const {router} = this.props;
+		const {router, dispatch} = this.props;
 		return (
 			<div>
 				<p onClick={() => {

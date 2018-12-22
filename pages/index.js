@@ -15,11 +15,7 @@ class Index extends React.Component {
 	}) {
 		let users = [];
 
-		
-		await new Promise((resolve) => {
-      setTimeout(resolve, 3000)
-    })
-		
+	
 		try {
 			if (isServer) {
 				const reqInfo = req.headers;
@@ -37,13 +33,13 @@ class Index extends React.Component {
 			}
 		} catch(error) {
 			// 打印错误日志
-			console.log(error + new Date() + "================" + "首页 user接口");
+			console.log(error)
 		}		
 	}
 
 	render() {
 		
-		const { users, reqInfo, username, router} = this.props;
+		const { users, reqInfo, username, router, dispatch} = this.props;
 		console.log(reqInfo);
 		return ( 
 			<div>
